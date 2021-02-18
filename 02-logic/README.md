@@ -27,17 +27,17 @@ https://github.com/Fabulec/Digital-electronics-1
 
 
 
-![Screenshot od EDA Playground](Images/BmensieAvzorec.png)
+![Screenshot od EDA Playground](Image/BmensieAvzorec.png)
 
-![Screenshot od EDA Playground](Images/brovnasaAvzorec.png)
+![Screenshot od EDA Playground](Image/brovnasaAvzorec.png)
 
 # Less Than POS:
 
-![Screenshot od EDA Playground](Images/lessthanposgraph.png)
-![Screenshot od EDA Playground](Images/lestahnposvzorec.png)
+![Screenshot od EDA Playground](Image/lessthanposgraph.png)
+![Screenshot od EDA Playground](Image/lestahnposvzorec.png)
 
 # Greater Than SOP:
 
-![Screenshot od EDA Playground](Images/greaterthansopgraph.png)
-![Screenshot od EDA Playground](Images/greaterthansopvzorec.png)
+![Screenshot od EDA Playground](Image/greaterthansopgraph.png)
+![Screenshot od EDA Playground](Image/greaterthansopvzorec.png)
 

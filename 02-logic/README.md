@@ -31,9 +31,12 @@ https://github.com/Fabulec/Digital-electronics-1
 ![Screenshot od EDA Playground](Image/BmensieAvzorec.png)
 ![Screenshot od EDA Playground](Image/brovnasaAvzorec.png)
 
+![Screenshot od EDA Playground](Image/BvacsieAvzorec.png)
+
+## Equeal:
 
 ![Screenshot od EDA Playground](Image/tabulka1.png)
-![Screenshot od EDA Playground](Image/BvacsieAvzorec.png)
+
 
 
 

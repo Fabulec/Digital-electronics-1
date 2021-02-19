@@ -184,6 +184,14 @@ end architecture testbench;
 
 ```
 
+#Listing of simulator console output, i.e. with one reported error:
 
+
+![Screenshot od EDA Playground](Image/error.png)
+
+
+# EDA:
+
+https://www.edaplayground.com/x/mjrn
 
 

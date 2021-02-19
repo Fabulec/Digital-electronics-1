@@ -49,6 +49,9 @@ https://github.com/Fabulec/Digital-electronics-1
 ![Screenshot od EDA Playground](Image/greaterthansopvzorec.png)
 
 
+
+
+
 # 3.A 4-bit binary comparator
 
 ## Listing of VHDL code (design.vhd):
@@ -80,13 +83,19 @@ begin
 	B_equals_A_o    <= '1' when (b_i = a_i) else '0';
 
     
-
-
 end architecture Behavioral;
 ```
 
 
+
+
+
+
+
+
 #Listing of VHDL testbench (testbench.vhd):
+
+
 
 ```vhdl
 library ieee;
@@ -120,11 +129,10 @@ begin
     
     p_stimulus : process
     begin
-        -- Report a note at the begining of stimulus process
+        
         report "Stimulus process started" severity note;
 
         --0
-        -- First test values
         s_b <= "0000"; s_a <= "0000"; wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))

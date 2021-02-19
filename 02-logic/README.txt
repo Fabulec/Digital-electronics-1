@@ -33,7 +33,7 @@ https://github.com/Fabulec/Digital-electronics-1
 
 
 ![Screenshot od EDA Playground](Image/tabulka1.png)
-![Screenshot od EDA Playground](Image/BvacsieAvzorec.png)
+![Screenshot od EDA Playground](Image/BvacsieA vzorec.png)
 
 
 
@@ -45,5 +45,6 @@ https://github.com/Fabulec/Digital-electronics-1
 # Greater Than SOP:
 
 ![Screenshot od EDA Playground](Image/greaterthansopgraph.png)
+
 ![Screenshot od EDA Playground](Image/greaterthansopvzorec.png)
 

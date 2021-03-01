@@ -1,8 +1,8 @@
-# Digital-electronics-1
-
-#Lab 3: Introduction to Vivado
-
+## Digital-electronics-1
 https://github.com/Fabulec/Digital-electronics-1
+
+
+#Lab 3: Introduction to Vivado:
 
 
 # Figure or table with connection of 16 slide switches and 16 LEDs on Nexys A7 board:
@@ -119,7 +119,10 @@ end architecture testbench;
 	15. Klikneme "Create File" zmeníme file type na "VHDL" a type file name s pridavkom "tb_" a name project
 	16. Klikneme "OK" -> "Finish" -> "OK" -> "Yes"
 
-ešte opis simulacie mi tu chýba ale chill to spravim zajtra :) 
+## Running simulation:
+
+	17.V sekcií "Simulation" si vyberieme a klikneme na "Run Simulation" -> "Run Brhavioral Simulation"
+
 
 
 

@@ -5,7 +5,7 @@ https://github.com/Fabulec/Digital-electronics-1
 #Lab 3: Introduction to Vivado:
 
 
-# Figure or table with connection of 16 slide switches and 16 LEDs on Nexys A7 board:
+## Figure or table with connection of 16 slide switches and 16 LEDs on Nexys A7 board:
 
 ![Screenshot od EDA Playground](Image/ledsw.png)
 
@@ -32,7 +32,7 @@ https://github.com/Fabulec/Digital-electronics-1
 
 # Two-bit wide 4-to-1 multiplexer:
 
-# VHDL architecture:
+## VHDL architecture:
 
 ```vhdl
 architecture Behavioral of mux_2bit_4to1 is
@@ -45,7 +45,7 @@ begin
 
 ```
 
-# VHDL stimulus process:
+## VHDL stimulus process:
 
 ```vhdl
 

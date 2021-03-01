@@ -2,7 +2,7 @@
 https://github.com/Fabulec/Digital-electronics-1
 
 
-#Lab 3: Introduction to Vivado:
+# Lab 3: Introduction to Vivado:
 
 
 ## Figure or table with connection of 16 slide switches and 16 LEDs on Nexys A7 board:

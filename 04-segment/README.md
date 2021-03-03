@@ -27,7 +27,12 @@ https://github.com/Fabulec/Digital-electronics-1
 | F | 1111 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
 
 
+
+
 ![Screenshot od EDA Playground](Image/7segciselne.png)
+
+
+
 
 ![Screenshot od EDA Playground](Image/seg7_schema.png)
 

@@ -150,12 +150,12 @@ end Behavioral;
 ```
 
 
-## Screenshot with simulated time waveforms
+## Screenshot with simulated time waveforms:
 
 ![Screenshot od EDA Playground](Image/top.vhd_simulacia.png)
 
 
-## Listing of VHDL code from source file
+## Listing of VHDL code from source file:
 
 ```vhdl
 hex2seg : entity work.hex_7seg

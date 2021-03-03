@@ -1,8 +1,8 @@
-# Digital-electronics-1
+## Digital-electronics-1
 
+https://github.com/Fabulec/Digital-electronics-1
 
-
-## Lab 4: Seven-segment display decoder:
+# Lab 4: Seven-segment display decoder:
 
 
 ## Table:

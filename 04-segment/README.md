@@ -29,7 +29,7 @@ https://github.com/Fabulec/Digital-electronics-1
 
 ![Screenshot od EDA Playground](Image/7segciselne.png)
 
-![Screenshot od EDA Playground](Image/7seg_schema.png)
+![Screenshot od EDA Playground](Image/seg7_schema.png)
 
 
 # Seven-segment display decode:
@@ -40,12 +40,8 @@ https://github.com/Fabulec/Digital-electronics-1
 architecture Behavioral of hex_7seg is
 
 begin
- --------------------------------------------------------------------
-    -- p_7seg_decoder:
-    -- A combinational process for 7-segment display decoder. 
-    -- Any time "hex_i" is changed, the process is "executed".
-    -- Output pin seg_o(6) corresponds to segment A, seg_o(5) to B, etc.
-    --------------------------------------------------------------------
+ 
+
     p_7seg_decoder : process(hex_i)
     begin
     

@@ -175,7 +175,7 @@ hex2seg : entity work.hex_7seg
 
 
 
-# 3. LED(7:4) indicators:
+# 3. LED indicators:
 
 ## Truth Table:
 

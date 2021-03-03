@@ -1,11 +1,11 @@
-#Digital-electronics-1
+# Digital-electronics-1
 
 
 
-##Lab 4: Seven-segment display decoder:
+## Lab 4: Seven-segment display decoder:
 
 
-##Table:
+## Table:
 
 | Hex | Inputs | A | B | C | D | E | F | G |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -28,11 +28,11 @@
 
 
 ![Screenshot od EDA Playground](Image/7segciselne.png)
-![Screenshot od EDA Playground](Image/7seg.png)
+
 ![Screenshot od EDA Playground](Image/7seg_schema.png)
 
 
-# Seven-segment display decode?
+# Seven-segment display decode:
 
 ## Listing of VHDL architecture from source file:
 
@@ -87,7 +87,7 @@ begin
 ```
 
 
-## Listing of VHDL stimulus process from testbench file:
+##  Listing of VHDL stimulus process from testbench file:
 
 
 
@@ -152,10 +152,10 @@ end Behavioral;
 ```
 
 
-##Screenshot with simulated time waveforms
+## Screenshot with simulated time waveforms
 
 ![Screenshot od EDA Playground](Image/top.vhd_simulacia.png)
 
 
-##Listing of VHDL code from source file
+## Listing of VHDL code from source file
 

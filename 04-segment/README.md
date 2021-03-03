@@ -4,8 +4,8 @@ https://github.com/Fabulec/Digital-electronics-1
 
 # Lab 4: Seven-segment display decoder:
 
-
-## Table:
+# 1. Preparation tasks:
+## Truth Table:
 
 | Hex | Inputs | A | B | C | D | E | F | G |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -32,7 +32,7 @@ https://github.com/Fabulec/Digital-electronics-1
 ![Screenshot od EDA Playground](Image/seg7_schema.png)
 
 
-# Seven-segment display decode:
+# 2. Seven-segment display decode:
 
 ## Listing of VHDL architecture from source file:
 
@@ -155,3 +155,32 @@ end Behavioral;
 
 ## Listing of VHDL code from source file
 
+```vhdl
+hex2seg : entity work.hex_7seg
+        port map
+        (
+            hex_i           => SW,
+            
+            seg_o(6)        => CA,
+            seg_o(5)        => CB,
+            seg_o(4)        => CC,
+            seg_o(3)        => CD,
+            seg_o(2)        => CE,
+            seg_o(1)        => CF,
+            seg_o(0)        => CG
+        );
+```
+
+
+
+# 3. LED(7:4) indicators:
+
+## Truth Table:
+
+
+
+## Listing of VHDL code for LEDs:
+
+
+
+## Screenshot with simulated time waveforms:

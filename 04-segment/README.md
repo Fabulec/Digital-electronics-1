@@ -26,17 +26,17 @@ https://github.com/Fabulec/Digital-electronics-1
 | E | 1110 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
 | F | 1111 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
 
-
-
-
+&nbsp;
+&nbsp;
+&nbsp;
 ![Screenshot od EDA Playground](Image/7segciselne.png)
 
-
-
-
+&nbsp;
+&nbsp;
+&nbsp;
 ![Screenshot od EDA Playground](Image/seg7_schema.png)
-
-
+&nbsp;
+&nbsp;
 # 2. Seven-segment display decode:
 
 ## Listing of VHDL architecture from source file:

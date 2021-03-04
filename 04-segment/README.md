@@ -152,7 +152,7 @@ end Behavioral;
 
 ## Screenshot with simulated time waveforms:
 
-![Screenshot od EDA Playground](Image/top.vhd_simulacia.png)
+![Screenshot od EDA Playground](Image/simulacia1.png)
 
 
 ## Listing of VHDL code from source file:

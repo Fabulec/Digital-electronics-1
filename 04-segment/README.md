@@ -201,6 +201,8 @@ hex2seg : entity work.hex_7seg
 
 ## Listing of VHDL code for LEDs:
 
+```vhdl
+
 -- Display input value
     LED(3 downto 0) <= SW;
     
@@ -215,6 +217,7 @@ hex2seg : entity work.hex_7seg
    
 
     LED(7)  <= '1' when (SW = "0001" or SW = "0010" or SW = "0100" or SW = "1000") else '0';
+```
 
 ## Screenshot with simulated time waveforms:
 ![Screenshot od EDA Playground](Image/simulacia2.png)

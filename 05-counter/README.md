@@ -2,7 +2,9 @@
 
 https://github.com/Fabulec/Digital-electronics-1
 
-# Lab 5: Binary counter
+# Lab 5: Binary counter:
+
+## Table with connection of push buttons on Nexys A7 board:
 
 | Button | Pin | 
 | :-:    | :-: | 
@@ -13,6 +15,7 @@ https://github.com/Fabulec/Digital-electronics-1
 | BTNC   | N17 | 
 | BTNRES | C12 |
 
+## Table with calculated values:
 
 |Time interval|Number of clk periods|Number of clk periods in hex|Number of clk periods in binary|
 | :-: | :-: | :-: | :-: |

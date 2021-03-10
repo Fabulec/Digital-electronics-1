@@ -4,9 +4,9 @@ https://github.com/Fabulec/Digital-electronics-1
 
 # Lab 5: Binary counter:
 ## 1. Preparation tasks:
-![Screenshot od EDA Playground](Image/seg7_schema1.png)
-
 ## Table with connection of push buttons on Nexys A7 board:
+
+![Screenshot od EDA Playground](Image/seg7_schema1.png)
 
 | Button | Pin | 
 | :-:    | :-: | 

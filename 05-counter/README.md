@@ -3,7 +3,7 @@
 https://github.com/Fabulec/Digital-electronics-1
 
 # Lab 5: Binary counter:
-
+## 1.
 ## Table with connection of push buttons on Nexys A7 board:
 
 | Button | Pin | 

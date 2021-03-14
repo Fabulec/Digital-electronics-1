@@ -166,5 +166,7 @@ end Behavioral;
 
 ```
 
-# Coming Soon :D
-ešte dačo idk čo zatal
+# 3.:
+## Image of the top layer including both counters, ie a 4-bit bidirectional counter from Part 4 and a 16-bit counter with a 10 ms time base:
+
+![Screenshot od EDA Playground](Image/3_uloha.png)

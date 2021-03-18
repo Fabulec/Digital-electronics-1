@@ -7,7 +7,7 @@ https://github.com/Fabulec/Digital-electronics-1
 # 1.Preparation task:
 ## Timing diagram figure for displaying value 3.142:
 
-
+![Screenshot od EDA Playground](Image/obrazok1.png)
 
 # 2.Display driver:
 ## Listing of VHDL code of the process p_mux:

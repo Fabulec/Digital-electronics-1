@@ -49,52 +49,103 @@ https://github.com/Fabulec/Digital-electronics-1
 ## Listing of VHDL testbench file tb_driver_7seg_4digits:
 
 ```vhdl
-entity hex_7seg is
-    Port ( hex_i : in STD_LOGIC_VECTOR (4 - 1 downto 0);  --Input binary data
-           seg_o : out STD_LOGIC_VECTOR (7 - 1 downto 0));   --Cathode values in the order A, B, C, D, E, F, G
-end hex_7seg;
+architecture testbench of tb_driver_7seg_4digits is
 
-architecture Behavioral of hex_7seg is
-begin
-p_7seg_decoder : process(hex_i)
-begin
- case hex_i is --Klasický case
-            when "0000" =>
-                seg_o <= "0000001";     -- 0
-            when "0001" =>
-                seg_o <= "1001111";     -- 1
-            when "0010" =>
-                seg_o <= "0010010";     -- 2
-            when "0011" =>
-                seg_o <= "0000110";     -- 3
-            when "0100" =>
-                seg_o <= "1001100";     -- 4
-            when "0101" =>
-                seg_o <= "0100100";     -- 5
-            when "0110" =>
-                seg_o <= "0100000";     -- 6
-            when "0111" =>
-                seg_o <= "0001111";     -- 7
-            when "1000" =>
-                seg_o <= "0000000";     -- 8
-            when "1001" =>
-                seg_o <= "0000100";     -- 9
-            when "1010" =>
-                seg_o <= "0001000";     -- A (10)
-            when "1011" =>
-                seg_o <= "1100000";     -- B (11)
-            when "1100" =>
-                seg_o <= "0110001";     -- C (12)
-            when "1101" =>
-                seg_o <= "1000010";     -- D (13)
-            when "1110" =>
-                seg_o <= "0110000";     -- E (14)
-            when others =>
-                seg_o <= "0111000";     -- F (15) 
-        end case;
-    end process p_7seg_decoder;
+    -- Local constants
+    constant c_CLK_100MHZ_PERIOD : time    := 10 ns;
 
-end Behavioral;
+    --Local signals
+    signal s_clk_100MHz : std_logic;
+    
+    signal s_reset : std_logic;
+    
+    signal s_data0 : std_logic_vector(4 - 1 downto 0);
+    signal s_data1 : std_logic_vector(4 - 1 downto 0);
+    signal s_data2 : std_logic_vector(4 - 1 downto 0);
+    signal s_data3 : std_logic_vector(4 - 1 downto 0);
+    
+    signal s_dp_i : std_logic_vector(4 - 1 downto 0);
+    signal s_dp_o : std_logic;
+    signal s_seg : std_logic_vector(7 - 1 downto 0);
+    
+    signal s_dig : std_logic_vector(4 - 1 downto 0);
+
+begin
+    -- Connecting testbench signals with driver_7seg_4digits entity
+    -- (Unit Under Test)
+    uut_driver_7seg_4digits : entity work.driver_7seg_4digits
+    port map(
+            clk      =>  s_clk_100MHZ,
+            reset    =>  s_reset,
+            
+            data0_i  =>  s_data0,
+            data1_i  =>  s_data1,
+            data2_i  =>  s_data2,
+            data3_i  =>  s_data3,
+            
+            dp_i     =>  s_dp_i,
+            
+            dp_o     =>  s_dp_o,
+            seg_o    =>  s_seg,
+            dig_o    =>  s_dig
+        );
+
+    --------------------------------------------------------------------
+    -- Clock generation process
+    --------------------------------------------------------------------
+    p_clk_gen : process
+    begin
+        while now < 750 ns loop         -- 75 periods of 100MHz clock
+            s_clk_100MHz <= '0';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+            s_clk_100MHz <= '1';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+        end loop;
+        wait;
+    end process p_clk_gen;
+
+    --------------------------------------------------------------------
+    -- Reset generation process
+    --------------------------------------------------------------------
+    p_reset_gen : process
+    begin
+        s_reset <= '0';
+        wait for 128 ns;
+        
+        s_reset <= '1';
+        wait for 53 ns;
+        
+        s_reset <= '0';
+
+        wait;
+    end process p_reset_gen;    
+    --------------------------------------------------------------------
+    -- Data generation process
+    --------------------------------------------------------------------
+    p_stimulus : process
+    begin
+        report "Stimulus process started" severity note;
+        --3.142
+        s_data3  <=  "0011";
+        s_data2  <=  "0001";
+        s_data1  <=  "0100";
+        s_data0  <=  "0010";
+        
+        s_dp_i   <=  "0111";
+        
+        wait for 350 ns;
+        
+        s_data3  <=  "0001";
+        s_data2  <=  "0000";
+        s_data1  <=  "0001";
+        s_data0  <=  "0000";
+        
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;    
+
+end architecture testbench;
+
 ```
 ## Screenshot with simulated time waveforms:
 

@@ -253,7 +253,4 @@ begin
 # 3.Eight-digit driver:
 
 ## Image of the driver schematic:
-
-Rukou alebo pc obrazok :/
-
- _*-*_
+![Screenshot od EDA Playground](Image/lol.png)

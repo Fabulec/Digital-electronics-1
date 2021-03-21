@@ -173,7 +173,7 @@ end architecture testbench;
 ```
 ## Screenshot with simulated time waveforms:
 
-![Screenshot od EDA Playground](Image/        .png)
+![Screenshot od EDA Playground](Image/waveform.png)
 
 ## Listing of VHDL architecture of the top layer:
 

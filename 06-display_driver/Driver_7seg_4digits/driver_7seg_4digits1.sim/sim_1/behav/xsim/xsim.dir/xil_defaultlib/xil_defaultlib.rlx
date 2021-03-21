@@ -1,0 +1,9 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+C:/Users/fazul/OneDrive/Pota/DE1/Digital-electronics-1/06-display_driver/driver_7seg_4digits1/driver_7seg_4digits1.srcs/sim_1/new/tb_driver_7seg_4digits.vhd,1616361359,vhdl,,,,tb_driver_7seg_4digits,,,,,,,,
+C:/Users/fazul/OneDrive/Pota/DE1/Digital-electronics-1/06-display_driver/driver_7seg_4digits1/driver_7seg_4digits1.srcs/sources_1/new/clock_enable.vhd,1616361204,vhdl,C:/Users/fazul/OneDrive/Pota/DE1/Digital-electronics-1/06-display_driver/driver_7seg_4digits1/driver_7seg_4digits1.srcs/sources_1/new/driver_7seg_4digits.vhd,,,clock_enable,,,,,,,,
+C:/Users/fazul/OneDrive/Pota/DE1/Digital-electronics-1/06-display_driver/driver_7seg_4digits1/driver_7seg_4digits1.srcs/sources_1/new/cnt_up_down.vhd,1616361248,vhdl,C:/Users/fazul/OneDrive/Pota/DE1/Digital-electronics-1/06-display_driver/driver_7seg_4digits1/driver_7seg_4digits1.srcs/sources_1/new/driver_7seg_4digits.vhd,,,cnt_up_down,,,,,,,,
+C:/Users/fazul/OneDrive/Pota/DE1/Digital-electronics-1/06-display_driver/driver_7seg_4digits1/driver_7seg_4digits1.srcs/sources_1/new/driver_7seg_4digits.vhd,1616361160,vhdl,C:/Users/fazul/OneDrive/Pota/DE1/Digital-electronics-1/06-display_driver/driver_7seg_4digits1/driver_7seg_4digits1.srcs/sim_1/new/tb_driver_7seg_4digits.vhd,,,driver_7seg_4digits,,,,,,,,
+C:/Users/fazul/OneDrive/Pota/DE1/Digital-electronics-1/06-display_driver/driver_7seg_4digits1/driver_7seg_4digits1.srcs/sources_1/new/hex_7seg.vhd,1616361280,vhdl,C:/Users/fazul/OneDrive/Pota/DE1/Digital-electronics-1/06-display_driver/driver_7seg_4digits1/driver_7seg_4digits1.srcs/sources_1/new/driver_7seg_4digits.vhd,,,hex_7seg,,,,,,,,

@@ -38,7 +38,7 @@ https://github.com/Fabulec/Digital-electronics-1
 ![Screenshot od EDA Playground](Image/3.png)
 
 # 2.D latch:
-## VHDL code listing of the process p_d_latch:
+## VHDL code listing of the process ```p_d_latch```:
 
 ```vhdl
 entity d_latch1 is
@@ -70,7 +70,7 @@ begin
     
     end if ;
     
-end process p_d_latch;
+end process ```p_d_latch```;
 
 
 
@@ -78,7 +78,7 @@ end Behavioral;
 
 ```
 
-## Listing of VHDL reset and stimulus processes from the testbench tb_d_latch:
+## Listing of VHDL reset and stimulus processes from the testbench ```tb_d_latch```:
 
 ```vhdl
 
@@ -90,8 +90,8 @@ end Behavioral;
 
 # 3. Flip-flops:
 
-## VHDL code listing of the processes p_d_ff_arst, p_d_ff_rst, p_jk_ff_rst, p_t_ff_rst:
-### p_d_ff_arst:
+## VHDL code listing of the processes ```p_d_ff_arst```, ```p_d_ff_rst```, ```p_jk_ff_rst```, ```p_t_ff_rst```:
+### ```p_d_ff_arst```:
 ```vhdl
 entity tb_d_ff_arst is
 --  Port ( );
@@ -120,13 +120,13 @@ port map(
 end Behavioral;
 
 ```
-### p_d_ff_rst
+### ```p_d_ff_rst```
 
 ```vhdl
 
 ```
 
-### p_jk_ff_rst
+### ```p_jk_ff_rst```
 ```vhdl
 entity jk_ff_rst is
 Port (                            
@@ -179,7 +179,7 @@ q_bar   <= not s_q;
 
 end Behavioral;
 ```
-### p_t_ff_rst
+### ```p_t_ff_rst```
 ```vhdl
 
 ```

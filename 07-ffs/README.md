@@ -13,6 +13,8 @@ https://github.com/Fabulec/Digital-electronics-1
 | 1   |  0   |     1   |   Invert (Toggle)        |
 | 1   |  1   |      1  |   No change       |
 
+![Screenshot od EDA Playground](Image/1.png)
+
    | J | K | Qn | Q(n+1) | Comments |
    | :-: | :-: | :-: | :-: | :-- |
    | 0 | 0 | 0 | 0 | No change |
@@ -24,12 +26,16 @@ https://github.com/Fabulec/Digital-electronics-1
    | 1 | 1 | 0 | 1|      Toggle    |
    | 1 | 1 | 1 |  0|       Toggle   |
 
-   | T | Qn | Q(n+1) | Comments |
+![Screenshot od EDA Playground](Image/2.png)
+  
+ | T | Qn | Q(n+1) | Comments |
    | :-: | :-: | :-: | :--      |
    | 0   |  0  |   0  |   No change       |
    | 0   |  1  |    1 |  No change         |
    | 1   |   0  |    1 |    Invert (Toggle)    |
    | 1   |    1 |     0|   Invert (Toggle)       |
+
+![Screenshot od EDA Playground](Image/3.png)
 
 # 2.D latch:
 ## VHDL code listing of the process p_d_latch:

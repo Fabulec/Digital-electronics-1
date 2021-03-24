@@ -37,6 +37,10 @@ https://github.com/Fabulec/Digital-electronics-1
 
 ![Screenshot od EDA Playground](Image/3.png)
 
+
+
+
+
 # 2.D latch:
 ## VHDL code listing of the process ```p_d_latch```:
 
@@ -78,20 +82,34 @@ end Behavioral;
 
 ```
 
+
+
+
+
 ## Listing of VHDL reset and stimulus processes from the testbench ```tb_d_latch```:
 
 ```vhdl
 
 ```
 
+
+
+
 ## Screenshot with simulated time waveforms:
 
 ![Screenshot od EDA Playground](Image/     .png)
 
+
+
+
+
+
 # 3. Flip-flops:
 
 ## VHDL code listing of the processes ```p_d_ff_arst```, ```p_d_ff_rst```, ```p_jk_ff_rst```, ```p_t_ff_rst```:
-### ```p_d_ff_arst```:
+
+
+### VHDL code listing of the process ```p_d_ff_arst```:
 ```vhdl
 entity tb_d_ff_arst is
 --  Port ( );
@@ -120,11 +138,23 @@ port map(
 end Behavioral;
 
 ```
+
+
+
+
+
+
 ### VHDL code listing of the process ```p_d_ff_rst```
 
 ```vhdl
 
 ```
+
+
+
+
+
+
 
 ### VHDL code listing of the process ```p_jk_ff_rst```
 ```vhdl
@@ -179,19 +209,39 @@ q_bar   <= not s_q;
 
 end Behavioral;
 ```
+
+
+
+
+
 ### VHDL code listing of the process ```p_t_ff_rst```
 ```vhdl
 
 ```
+
+
+
+
+
+
 ## Listing of VHDL clock, reset and stimulus processes from the testbench files:
  
 ```vhdl
 
 ```
 
+
+
+
+
 ## Screenshot, with simulated time waveforms:
 
+
 ![Screenshot od EDA Playground](Image/     .png)
+
+
+
+
 
 # 4. Shift register:
 

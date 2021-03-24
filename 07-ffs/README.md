@@ -6,6 +6,7 @@ https://github.com/Fabulec/Digital-electronics-1
 
 # 1.Preparation Task:
 ## Characteristic equations and completed tables for D, JK, T flip-flops:
+## ![Screenshot od EDA Playground](Image/1.png)
 | D   | Qn  | Q(n+1) | Comments |
 | :-: | :-: | :-:    | :--      |
 | 0   | 0   |     0   |   No change       |
@@ -13,8 +14,8 @@ https://github.com/Fabulec/Digital-electronics-1
 | 1   |  0   |     1   |   Invert (Toggle)        |
 | 1   |  1   |      1  |   No change       |
 
-![Screenshot od EDA Playground](Image/1.png)
 
+## ![Screenshot od EDA Playground](Image/2.png)
    | J | K | Qn | Q(n+1) | Comments |
    | :-: | :-: | :-: | :-: | :-- |
    | 0 | 0 | 0 | 0 | No change |
@@ -26,7 +27,7 @@ https://github.com/Fabulec/Digital-electronics-1
    | 1 | 1 | 0 | 1|      Toggle    |
    | 1 | 1 | 1 |  0|       Toggle   |
 
-![Screenshot od EDA Playground](Image/2.png)
+## ![Screenshot od EDA Playground](Image/3.png)
   
  | T | Qn | Q(n+1) | Comments |
    | :-: | :-: | :-: | :--      |

@@ -6,8 +6,8 @@ https://github.com/Fabulec/Digital-electronics-1
 
 # 1.Preparation Task:
 ## Characteristic equations and completed tables for D, JK, T flip-flops:
-<a href="https://www.codecogs.com/eqnedit.php?latex=\begin{align}&space;q{n&plus;1}^{D}&space;=&space;&~&space;d&space;&\&space;q{n&plus;1}^{JK}&space;=&~&space;j\overline{q}{n}\&space;&plus;\overline{k},q{n}&space;&\&space;q{n&plus;1}^{T}&space;=&space;&~&space;t\overline{q}{n}\&space;&plus;\overline{t},q_{n}&space;\end{align}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{align}&space;q{n&plus;1}^{D}&space;=&space;&~&space;d&space;&\&space;q{n&plus;1}^{JK}&space;=&~&space;j\overline{q}{n}\&space;&plus;\overline{k},q{n}&space;&\&space;q{n&plus;1}^{T}&space;=&space;&~&space;t\overline{q}{n}\&space;&plus;\overline{t},q_{n}&space;\end{align}" title="\begin{align} q{n+1}^{D} = &~ d &\ q{n+1}^{JK} =&~ j\overline{q}{n}\ +\overline{k},q{n} &\ q{n+1}^{T} = &~ t\overline{q}{n}\ +\overline{t},q_{n} \end{align}" /></a>
-# ![Screenshot od EDA Playground](Image/1.png)
+
+# ![Screenshot od EDA Playground](Image/1a.png)
 | D   | Qn  | Q(n+1) | Comments |
 | :-: | :-: | :-:    | :--      |
 | 0   | 0   |     0   |   No change       |
@@ -16,7 +16,7 @@ https://github.com/Fabulec/Digital-electronics-1
 | 1   |  1   |      1  |   No change       |
 
 
-# ![Screenshot od EDA Playground](Image/2.png)
+# ![Screenshot od EDA Playground](Image/2a.png)
    | J | K | Qn | Q(n+1) | Comments |
    | :-: | :-: | :-: | :-: | :-- |
    | 0 | 0 | 0 | 0 | No change |
@@ -28,7 +28,7 @@ https://github.com/Fabulec/Digital-electronics-1
    | 1 | 1 | 0 | 1|      Toggle    |
    | 1 | 1 | 1 |  0|       Toggle   |
 
-# ![Screenshot od EDA Playground](Image/3.png)
+# ![Screenshot od EDA Playground](Image/3a.png)
   
  | T | Qn | Q(n+1) | Comments |
    | :-: | :-: | :-: | :--      |

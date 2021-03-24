@@ -6,7 +6,30 @@ https://github.com/Fabulec/Digital-electronics-1
 
 # 1.Preparation Task:
 ## Characteristic equations and completed tables for D, JK, T flip-flops:
+| D   | Qn  | Q(n+1) | Comments |
+| :-: | :-: | :-:    | :--      |
+| 0   | 0   |        |          |
+| 0   | 1   |        |          |
+| 1   |     |        |          |
+| 1   |     |        |          |
 
+   | J | K | Qn | Q(n+1) | Comments |
+   | :-: | :-: | :-: | :-: | :-- |
+   | 0 | 0 | 0 | 0 | No change |
+   | 0 | 0 | 1 | 1 | No change |
+   | 0 | 1 | 0 |0   |    Reset |
+   | 0 | 1 | 1 | 0  | Reset    |
+   | 1 | 0 | 0 | 1 |        Set   |
+   | 1 | 0 | 1 | 1|      Set    |
+   | 1 | 1 | 0 | 1|      Toggle    |
+   | 1 | 1 | 1 |  0|       Toggle   |
+
+   | T | Qn | Q(n+1) | Comments |
+   | :-: | :-: | :-: | :--      |
+   | 0   |  0  |   0  |   No change       |
+   | 0   |  1  |    1 |  No change         |
+   | 1   |   0  |    1 |   Invert (Toggle)       |
+   | 1   |    1 |     0|   Invert (Toggle)       |
 
 # 2.D latch:
 ## VHDL code listing of the process p_d_latch:

@@ -8,10 +8,10 @@ https://github.com/Fabulec/Digital-electronics-1
 ## Characteristic equations and completed tables for D, JK, T flip-flops:
 | D   | Qn  | Q(n+1) | Comments |
 | :-: | :-: | :-:    | :--      |
-| 0   | 0   |        |          |
-| 0   | 1   |        |          |
-| 1   |     |        |          |
-| 1   |     |        |          |
+| 0   | 0   |     0   |   No change       |
+| 0   | 1   |      0  |    Invert (Toggle)        |
+| 1   |  0   |     1   |   Invert (Toggle)        |
+| 1   |  1   |      1  |   No change       |
 
    | J | K | Qn | Q(n+1) | Comments |
    | :-: | :-: | :-: | :-: | :-- |
@@ -28,7 +28,7 @@ https://github.com/Fabulec/Digital-electronics-1
    | :-: | :-: | :-: | :--      |
    | 0   |  0  |   0  |   No change       |
    | 0   |  1  |    1 |  No change         |
-   | 1   |   0  |    1 |   Invert (Toggle)       |
+   | 1   |   0  |    1 |    Invert (Toggle)    |
    | 1   |    1 |     0|   Invert (Toggle)       |
 
 # 2.D latch:

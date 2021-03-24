@@ -47,5 +47,5 @@ https://github.com/Fabulec/Digital-electronics-1
 
 ## Image of the shift register schematic:
 
-Obrážťečičoučik :)
+Obrážťečičičoučik :)
 

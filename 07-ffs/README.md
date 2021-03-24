@@ -2,9 +2,9 @@
 
 https://github.com/Fabulec/Digital-electronics-1
 
-#Lab 7: Latches and Flip-flops:
+# Lab 7: Latches and Flip-flops:
 
-# 1.Preparation Task:
+#### 1.Preparation Task:
 ## Characteristic equations and completed tables for D, JK, T flip-flops:
 
 

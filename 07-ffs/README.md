@@ -4,11 +4,11 @@ https://github.com/Fabulec/Digital-electronics-1
 
 # Lab 7: Latches and Flip-flops:
 
-#### 1.Preparation Task:
+# 1.Preparation Task:
 ## Characteristic equations and completed tables for D, JK, T flip-flops:
 
 
-# D latch:
+# 2.D latch:
 ## VHDL code listing of the process p_d_latch:
 
 ```vhdl

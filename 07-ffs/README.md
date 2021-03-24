@@ -70,7 +70,7 @@ begin
     
     end if ;
     
-end process ```p_d_latch```;
+end process p_d_latch;
 
 
 
@@ -120,13 +120,13 @@ port map(
 end Behavioral;
 
 ```
-### ```p_d_ff_rst```
+### VHDL code listing of the process ```p_d_ff_rst```
 
 ```vhdl
 
 ```
 
-### ```p_jk_ff_rst```
+### VHDL code listing of the process ```p_jk_ff_rst```
 ```vhdl
 entity jk_ff_rst is
 Port (                            
@@ -179,7 +179,7 @@ q_bar   <= not s_q;
 
 end Behavioral;
 ```
-### ```p_t_ff_rst```
+### VHDL code listing of the process ```p_t_ff_rst```
 ```vhdl
 
 ```

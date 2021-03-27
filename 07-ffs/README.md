@@ -11,10 +11,10 @@ https://github.com/Fabulec/Digital-electronics-1
 # ![Screenshot od EDA Playground](Image/1a.png)
 | D   | Qn  | Q(n+1) | Comments |
 | :-: | :-: | :-:    | :--      |
-| 0   | 0   |     0   |   No change       |
-| 0   | 1   |      0  |    Invert (Toggle)        |
-| 1   |  0   |     1   |   Invert (Toggle)        |
-| 1   |  1   |      1  |   No change       |
+| 0   | 0   |     0   |   Sampled and stored       |
+| 0   | 1   |      0  |   Sampled and stored       |
+| 1   |  0   |     1   |   Sampled and stored        |
+| 1   |  1   |      1  | Sampled and stored      |
 
 ### Equation "JK":
 # ![Screenshot od EDA Playground](Image/2a.png)

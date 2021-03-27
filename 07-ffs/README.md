@@ -956,7 +956,7 @@ end Behavioral;
 
 ## Screenshot, with simulated time waveforms:
 
-### ``` tb_d_ff_arst ```t
+### ``` tb_d_ff_arst ```
 ![Screenshot od EDA Playground](Image/graph2.png)
 ### ```tb_d_ff_rst ```
 ![Screenshot od EDA Playground](Image/graph3.png)
@@ -971,6 +971,6 @@ end Behavioral;
 # 4. Shift register:
 
 ## Image of the shift register schematic:
+![Screenshot od EDA Playground](Image/top.png)
 
-Obrážťečičičoučik :)
 

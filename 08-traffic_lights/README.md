@@ -5,8 +5,20 @@ https://github.com/Fabulec/Digital-electronics-1
 # Lab 8: Traffic light controller:
 # 1. Preparation tasks:
 ## Completed state table:
+| **Input P** | `0` | `0` | `1` | `1` | `0` | `1` | `0` | `1` | `1` | `1` | `1` | `0` | `0` | `1` | `1` | `1` |
+| :-- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| **Clock** | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) |
+| **State** | A |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| **Output R** | `0` |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 ## Figure with connection of RGB LEDs on Nexys A7 board and completed table with color settings:
+# ![Screenshot od EDA Playground](Image/ .png)
+
+| **RGB LED** | **Artix-7 pin names** | **Red** | **Yellow** | **Green** |
+| :-: | :-: | :-: | :-: | :-: |
+| LD16 | N15, M16, R12 | `1,0,0` | `1,1,0` | `0,1,0` |
+| LD17 | N16, R11, G14 | `1,0,0` | `1,1,0` | `0,1,0` |
+
 
 # 2.Traffic light controllert:
 ## State diagram:

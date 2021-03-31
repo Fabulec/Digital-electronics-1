@@ -28,6 +28,7 @@ https://github.com/Fabulec/Digital-electronics-1
 ## State diagram:
 
 ## Listing of VHDL code of sequential process p_smart_traffic_fsm:
+
 ```vhdl
 
 ```

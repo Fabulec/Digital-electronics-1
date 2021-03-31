@@ -147,8 +147,8 @@ end architecture Behavioral;
 ```
 
 ## Screenshot(s) of the simulation, from which it is clear that controller works correctly:
-# ![Screenshot od EDA Playground](Image/1.png)
-# ![Screenshot od EDA Playground](Image/2.png)
+# ![Screenshot od EDA Playground](Image/prve.png)
+# ![Screenshot od EDA Playground](Image/druhe.png)
 # 3.Smart controller:
 
 ## State table:

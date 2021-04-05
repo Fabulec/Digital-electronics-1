@@ -12,8 +12,8 @@ https://github.com/Fabulec/Digital-electronics-1
 | **Output R** | `0` |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 ## Figure with connection of RGB LEDs on Nexys A7 board and completed table with color settings:
-# ![Screenshot od EDA Playground](Image/3.png)
-# ![Screenshot od EDA Playground](Image/15.png)
+
+# ![Screenshot od EDA Playground](Image/17.png)
 
 | **RGB LED** | **Artix-7 pin names** | **Red** | **Yellow** | **Green** |
 | :-: | :-: | :-: | :-: | :-: |

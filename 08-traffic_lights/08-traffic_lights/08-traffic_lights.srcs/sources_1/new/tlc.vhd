@@ -1,32 +1,90 @@
-## Digital-electronics-1
-
-https://github.com/Fabulec/Digital-electronics-1
-
-# Lab 8: Traffic light controller:
-# 1. Preparation tasks:
-## Completed state table:
-| **Input P** | `0` | `0` | `1` | `1` | `0` | `1` | `0` | `1` | `1` | `1` | `1` | `0` | `0` | `1` | `1` | `1` |
-| :-- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| **Clock** | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) | ![Screenshot od EDA Playground](Image/eq_uparrow.png) |
-| **State** | A | A | B | C | C | D | A | B | C | D | B | B | B | C | D | B |
-| **Output R** | `0` | `0` | `0` | `0` | `0` | `1` | `0` | `0` | `0` | `1` | `0` | `0` | `0` | `0` | `1` | `0` |
-
-## Figure with connection of RGB LEDs on Nexys A7 board and completed table with color settings:
-
-# ![Screenshot od EDA Playground](Image/17.png)
-
-| **RGB LED** | **Artix-7 pin names** | **Red** | **Yellow** | **Green** |
-| :-: | :-: | :-: | :-: | :-: |
-| LD16 | N15, M16, R12 | `1,0,0` | `1,1,0` | `0,1,0` |
-| LD17 | N16, R11, G14 | `1,0,0` | `1,1,0` | `0,1,0` |
-
-
-# 2.Traffic light controllert:
-## State diagram:
-# ![Screenshot od EDA Playground](Image/diagram1.png)
-## Listing of VHDL code of sequential process p_traffic_fsm :
-```vhdl
-p_traffic_fsm : process(clk)                                                                      
+------------------------------------------------------------------------                             
+--                                                                                                   
+-- Traffic light controller using FSM.                                                               
+-- Nexys A7-50T, Vivado v2020.1.1, EDA Playground                                                    
+--                                                                                                   
+-- Copyright (c) 2020-Present Tomas Fryza                                                            
+-- Dept. of Radio Electronics, Brno University of Technology, Czechia                                
+-- This work is licensed under the terms of the MIT license.                                         
+--                                                                                                   
+-- This code is inspired by:                                                                         
+-- [1] LBEbooks, Lesson 92 - Example 62: Traffic Light Controller                                    
+--     https://www.youtube.com/watch?v=6_Rotnw1hFM                                                   
+-- [2] David Williams, Implementing a Finite State Machine in VHDL                                   
+--     https://www.allaboutcircuits.com/technical-articles/implementing-a-finite-state-machine-in-vhd
+-- [3] VHDLwhiz, One-process vs two-process vs three-process state machine                           
+--     https://vhdlwhiz.com/n-process-state-machine/                                                 
+--                                                                                                   
+------------------------------------------------------------------------                             
+                                                                                                     
+library ieee;                                                                                        
+use ieee.std_logic_1164.all;                                                                         
+use ieee.numeric_std.all;                                                                            
+                                                                                                     
+------------------------------------------------------------------------                             
+-- Entity declaration for traffic light controller                                                   
+------------------------------------------------------------------------                             
+entity tlc is                                                                                        
+    port(                                                                                            
+        clk     : in  std_logic;                                                                     
+        reset   : in  std_logic;                                                                     
+        -- Traffic lights (RGB LEDs) for two directions                                              
+        south_o : out std_logic_vector(3 - 1 downto 0);                                              
+        west_o  : out std_logic_vector(3 - 1 downto 0)                                               
+    );                                                                                               
+end entity tlc;                                                                                      
+                                                                                                     
+------------------------------------------------------------------------                             
+-- Architecture declaration for traffic light controller                                             
+------------------------------------------------------------------------                             
+architecture Behavioral of tlc is                                                                    
+                                                                                                     
+    -- Define the states                                                                             
+    type t_state is (STOP1,                                                                          
+                     WEST_GO,                                                                        
+                     WEST_WAIT,                                                                      
+                     STOP2,                                                                          
+                     SOUTH_GO,                                                                       
+                     SOUTH_WAIT);                                                                    
+    -- Define the signal that uses different states                                                  
+    signal s_state  : t_state;                                                                       
+                                                                                                     
+    -- Internal clock enable                                                                         
+    signal s_en     : std_logic;                                                                     
+    -- Local delay counter                                                                           
+    signal   s_cnt  : unsigned(5 - 1 downto 0);                                                      
+                                                                                                     
+    -- Specific values for local counter                                                             
+    constant c_DELAY_4SEC : unsigned(5 - 1 downto 0) := b"1_0000";                                   
+    constant c_DELAY_2SEC : unsigned(5 - 1 downto 0) := b"0_1000";                                   
+    constant c_DELAY_1SEC : unsigned(5 - 1 downto 0) := b"0_0100";                                   
+    constant c_ZERO       : unsigned(5 - 1 downto 0) := b"0_0000";                                   
+                                                                                                     
+begin                                                                                                
+                                                                                                     
+    --------------------------------------------------------------------                             
+    -- Instance (copy) of clock_enable entity generates an enable pulse                              
+    -- every 250 ms (4 Hz). Remember that the frequency of the clock                                 
+    -- signal is 100 MHz.                                                                            
+                                                                                                     
+    -- JUST FOR SHORTER/FASTER SIMULATION                                                            
+    s_en <= '1';                                                                                     
+--    clk_en0 : entity work.clock_enable                                                             
+--        generic map(                                                                               
+--            g_MAX =>        -- g_MAX = 250 ms / (1/100 MHz)                                        
+--        )                                                                                          
+--        port map(                                                                                  
+--            clk   => clk,                                                                          
+--            reset => reset,                                                                        
+--            ce_o  => s_en                                                                           
+--        );                                                                                         
+                                                                                                     
+    --------------------------------------------------------------------                             
+    -- p_traffic_fsm:                                                                                
+    -- The sequential process with synchronous reset and clock_enable                                
+    -- entirely controls the s_state signal by CASE statement.                                       
+    --------------------------------------------------------------------                             
+   p_traffic_fsm : process(clk)                                                                      
     begin                                                                                            
         if rising_edge(clk) then                                                                     
             if (reset = '1') then       -- Synchronous reset                                         
@@ -117,13 +175,15 @@ p_traffic_fsm : process(clk)
                 end case;                                                                            
             end if; -- Synchronous reset                                                             
         end if; -- Rising edge                                                                       
-    end process p_traffic_fsm; 
-```
-
-
-## Listing of VHDL code of combinatorial process p_output_fsm :
-```vhdl
-p_output_fsm : process(s_state)                                                                  
+    end process p_traffic_fsm;                                                                       
+                                                                                                     
+    --------------------------------------------------------------------                             
+    -- p_output_fsm:                                                                                 
+    -- The combinatorial process is sensitive to state changes, and sets                             
+    -- the output signals accordingly. This is an example of a Moore                                 
+    -- state machine because the output is set based on the active state.                            
+    --------------------------------------------------------------------                             
+    p_output_fsm : process(s_state)                                                                  
     begin                                                                                            
         case s_state is                                                                              
             when STOP1 =>                                                                            
@@ -136,7 +196,7 @@ p_output_fsm : process(s_state)
                                                                                                      
             when WEST_WAIT =>                                                                        
                 south_o <= "100";                                                                    
-                west_o  <= "110";                                            
+                west_o  <= "110";                               -- WRITE YOUR CODE HERE              
                                                                                                      
             when STOP2 =>                                                                            
                 south_o <= "100";                                                                    
@@ -149,92 +209,14 @@ p_output_fsm : process(s_state)
             when SOUTH_WAIT =>                                                                       
                 south_o <= "101";                                                                    
                 west_o  <= "100";                                                                    
-                                                                                                                                                                                          
+                                                                                                     
+                                                                                                     
+                                                                                                     
             when others =>                                                                           
                 south_o <= "100";   -- Red                                                           
                 west_o  <= "100";   -- Red                                                           
         end case;                                                                                    
     end process p_output_fsm;                                                                        
                                                                                                      
-end architecture Behavioral; 
-```
-
-## Screenshot(s) of the simulation, from which it is clear that controller works correctly:
-# ![Screenshot od EDA Playground](Image/prve.png)
-# ![Screenshot od EDA Playground](Image/druhe.png)
-# 3.Smart controller:
-
-## State table:
-| **Current state** | **Direction South** | **Direction West** | **Delay** | **No cars** | **Cars West** | **Cars South** | **Cars both directions** |
-| :-- | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| `goS`   | green  | red    | at least 3 sec | `goS` | `waitS` | `goS` | `waitS` |
-| `waitS` | yellow | red    | 0.5 sec        | `goW` | `goW` | `goW` | `goW` |
-| `goW`   | red    | green  | at least 3 sec | `goW` | `goW` | `waitW` | `waitW` |
-| `waitW` | red    | yellow | 0.5 sec        | `goS` | `goS` | `goS` | `goS` |
-## State diagram:
-# ![Screenshot od EDA Playground](Image/diagram2.png)
-## Listing of VHDL code of sequential process p_smart_traffic_fsm:
-
-```vhdl
-p_smart_traffic_fsm : process(clk)
-    begin
-        if rising_edge(clk) then
-            if (reset = '1') then       -- Synchronous reset
-                s_state <= goS ;        -- Set initial state
-                s_cnt   <= c_ZERO;      -- Clear all bits
-
-            elsif (s_en = '1') then
-                
-                case s_state is
-
-                    when goS =>
-                        if (s_cnt < c_DELAY_3SEC) then
-                            s_cnt <= s_cnt + 1;
-                        elsif (west_i = '1') then
-                            -- Move to the next state
-                            s_state <= waitS;
-                            -- Reset local counter value
-                            s_cnt   <= c_ZERO;
-                        end if;
-
-                    when waitS =>
-                        if (s_cnt < c_DELAY_0p5SEC) then
-                            s_cnt <= s_cnt + 1;
-                        else
-                            -- Move to the next state
-                            s_state <= goW;
-                            -- Reset local counter value
-                            s_cnt   <= c_ZERO;
-                        end if;
-                    
-                    when goW =>
-                        if (s_cnt < c_DELAY_3SEC) then
-                            s_cnt <= s_cnt + 1;
-                        elsif (south_i = '1') then
-                            -- Move to the next state
-                            s_state <= waitW;
-                            -- Reset local counter value
-                            s_cnt   <= c_ZERO;
-                        end if;
-                        
-                    when waitW =>
-                        -- WRITE YOUR CODE HERE
-                        if (s_cnt < c_DELAY_0p5SEC) then
-                            s_cnt <= s_cnt + 1;
-                        else
-                            -- Move to the next state
-                            s_state <= goS;
-                            -- Reset local counter value
-                            s_cnt   <= c_ZERO;
-                        end if;
-                        
-                    
-                    when others =>
-                        s_state <= goS;
-
-                end case;
-            end if; -- Synchronous reset
-        end if; -- Rising edge
-    end process p_smart_traffic_fsm;
-
-```
+end architecture Behavioral;                                                                         
+                                                                                                     

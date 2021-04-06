@@ -24,7 +24,7 @@ https://github.com/Fabulec/Digital-electronics-1
 # 2.Traffic light controllert:
 ## State diagram:
 
-# ![Screenshot od EDA Playground](Image/445.png)
+# ![Screenshot od EDA Playground](Image/diagram_1.png)
 
 ## Listing of VHDL code of sequential process p_traffic_fsm :
 ```vhdl

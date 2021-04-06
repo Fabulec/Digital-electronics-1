@@ -184,9 +184,7 @@ p_smart_traffic_fsm : process(clk)
                 s_cnt   <= c_ZERO;      -- Clear all bits
 
             elsif (s_en = '1') then
-                -- Every 250 ms, CASE checks the value of the s_state 
-                -- variable and changes to the next state according 
-                -- to the delay value.
+                
                 case s_state is
 
                     when goS =>
@@ -200,7 +198,6 @@ p_smart_traffic_fsm : process(clk)
                         end if;
 
                     when waitS =>
-                        -- WRITE YOUR CODE HERE
                         if (s_cnt < c_DELAY_0p5SEC) then
                             s_cnt <= s_cnt + 1;
                         else
@@ -231,9 +228,7 @@ p_smart_traffic_fsm : process(clk)
                             s_cnt   <= c_ZERO;
                         end if;
                         
-                    -- It is a good programming practice to use the 
-                    -- OTHERS clause, even if all CASE choices have 
-                    -- been made. 
+                    
                     when others =>
                         s_state <= goS;
 

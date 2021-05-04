@@ -27,7 +27,7 @@ The project is implementable on Arty A7-35T board, we are using modules from pre
 ![7-SEG](Images/1.png)
 
 **Connections of Hall sensor**
-![Hall-sensor.png](Images/2.png)
+![Hall-sensor](Images/2.png)
 
 **Tables with connections on board**
 
